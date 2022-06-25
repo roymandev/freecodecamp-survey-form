@@ -1,0 +1,113 @@
+// Variables
+$round-size: 0.25rem;
+
+// Mixins
+@mixin container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button {
+  font-size: inherit;
+  color: inherit;
+  border: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #cbd5e1;
+  color: #334155;
+  padding: 0 1rem;
+}
+
+.header {
+  @include container();
+  text-align: center;
+  padding: 4rem 0;
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__description {
+    font-size: 1.5rem;
+  }
+}
+
+.main {
+  @include container();
+  background-color: #fff;
+  box-shadow: 2px 2px 4px 0px hsla(215, 25%, 27%, 0.2);
+  border-radius: $round-size;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+.form {
+  @include flex-col();
+  gap: 1.5rem;
+
+  &__fieldset {
+    @include flex-col();
+    border: 0;
+    gap: 0.5rem;
+  }
+
+  &__label {
+    font-weight: 700;
+  }
+
+  &__inline {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__input {
+    padding: 0.5rem;
+    border-radius: $round-size;
+    border: 1px solid #cbd5e1;
+    background-color: inherit;
+
+    &:hover {
+      border-color: #94a3b8;
+    }
+
+    &:focus {
+      border-color: #64748b;
+      outline: none;
+      box-shadow: 0 0 6px 0px #64748b;
+    }
+  }
+
+  &__submit {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    padding: 1rem;
+    border-radius: $round-size;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0f172a;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 6px 0px #64748b;
+      background-color: #0f172a;
+    }
+  }
+}

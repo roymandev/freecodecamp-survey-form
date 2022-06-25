@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form - freeCodeCamp Certification Project</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 id="title" class="header__title">Survey Form</h1>
+      <p id="description" class="header__description">
+        Royman freeCodeCamp Certification Project
+      </p>
+    </header>
+    <main class="main">
+      <form id="survey-form" class="form" action="">
+        <fieldset class="form__fieldset">
+          <label id="name-label" for="name" class="form__label">Name</label>
+          <input
+            id="name"
+            class="form__input"
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <label id="email-label" for="email" class="form__label">Email</label>
+          <input
+            id="email"
+            class="form__input"
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <label id="number-label" for="number" class="form__label">Age</label>
+          <input
+            id="number"
+            class="form__input"
+            type="number"
+            name="age"
+            min="13"
+            max="120"
+            placeholder="Age"
+            required
+          />
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <p class="form__label">Gender</p>
+          <label class="form__inline"
+            ><input
+              class="form__input"
+              type="radio"
+              name="gender"
+              value="male"
+            />
+            Male</label
+          >
+          <label class="form__inline"
+            ><input
+              class="form__input"
+              type="radio"
+              name="gender"
+              value="female"
+            />
+            Female</label
+          >
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <label for="dropdown" class="form__label">Roles</label>
+          <select name="job" id="dropdown" class="form__input">
+            <option disabled="" value="">Select roles</option>
+            <option value="frontend">FrontEnd Developer</option>
+            <option value="backend">BackEnd Developer</option>
+            <option value="fullstack">Fullstack Developer</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <p class="form__label">Liked programming languages</p>
+          <label class="form__inline"
+            ><input
+              class="form__input"
+              type="checkbox"
+              name="liked-language"
+              value="javascript"
+            />
+            JavaScript</label
+          >
+          <label class="form__inline"
+            ><input
+              class="form__input"
+              type="checkbox"
+              name="liked-language"
+              value="php"
+            />
+            PHP</label
+          >
+          <label class="form__inline"
+            ><input
+              class="form__input"
+              type="checkbox"
+              name="liked-language"
+              value="phyton"
+            />
+            Phyton</label
+          >
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <label for="suggestions" class="form__label"
+            >Comments or suggestions?</label
+          >
+          <textarea
+            class="form__input"
+            name="suggestions"
+            id="suggestions"
+            rows="4"
+          ></textarea>
+        </fieldset>
+
+        <button id="submit" class="form__submit" type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
